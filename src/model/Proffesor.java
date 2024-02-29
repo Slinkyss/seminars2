@@ -16,7 +16,7 @@ public class Proffesor {
         return p_ID;
     }
 
-    public void setP_ID(long p_ID) {
+    public void setP_ID() {
         this.p_ID = p_ID;
         counter++;
     }
@@ -53,8 +53,8 @@ public class Proffesor {
             this.degree = null;
     }
 
-    public Proffesor(long p_ID, String name, String surname, String degree) {
-        this.p_ID = p_ID;
+    public Proffesor( String name, String surname, String degree) {
+        setP_ID();
         this.name = name;
         this.surname = surname;
         this.degree = degree;
@@ -62,5 +62,14 @@ public class Proffesor {
 
     public Proffesor(){
 
+    }
+
+    @Override
+    public String toString() {
+        return "Proffesor{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", degree='" + degree + '\'' +
+                '}';
     }
 }
