@@ -14,7 +14,7 @@ public class Grade {
         return g_ID;
     }
 
-    public void setG_ID(long g_ID) {
+    public void setG_ID() {
         this.g_ID = g_ID;
     }
 
@@ -46,5 +46,22 @@ public class Grade {
             this.course = course;
         else
             this.course = null;
+    }
+
+    public Grade(){
+        setG_ID();
+        setValue(4);
+        setCourse(new Course());
+        setStudent(new Student());
+    }
+
+    public Grade(int value, Course course, Student student){
+        setG_ID();
+        setValue(value);
+        setCourse(course);
+        setStudent(student);
+    }
+    public String toString(){
+        return student.getName() + " " + student.getSurname() + value + "in course :" + course.getTitle();
     }
 }

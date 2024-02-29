@@ -8,7 +8,7 @@ public class Student {
 
     private static long counter1 = 0;
 
-    public Student(Long ID, String name, String surname) {
+    public Student(String name, String surname) {
         this.name = name;
         this.surname = surname;
     }

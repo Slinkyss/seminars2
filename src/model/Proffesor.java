@@ -5,7 +5,7 @@ public class Proffesor {
     private long p_ID;
     private String name;
     private String surname;
-    private String degree;
+    private Degree degree;
 
     private static long counter = 0;
 
@@ -42,25 +42,27 @@ public class Proffesor {
         }
     }
 
-    public String getDegree() {
+    public Degree getDegree() {
         return degree;
     }
 
-    public void setDegree(String degree) {
-        if(degree != null)
-            this.degree = degree;
-        else
-            this.degree = null;
-    }
-
-    public Proffesor( String name, String surname, String degree) {
-        setP_ID();
-        this.name = name;
-        this.surname = surname;
+    public void setDegree(Degree degree) {
         this.degree = degree;
     }
 
+    public Proffesor( String name, String surname, Degree degree) {
+        setP_ID();
+        setName(name);
+        setSurname(surname);
+        setDegree(degree);
+    }
+
     public Proffesor(){
+        setP_ID();
+        setName("Default");
+        setSurname("Default");
+        setDegree(Degree.other);
+
 
     }
 
