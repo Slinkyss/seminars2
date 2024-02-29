@@ -17,7 +17,7 @@ public class Proffesor {
     }
 
     public void setP_ID() {
-        this.p_ID = p_ID;
+        this.p_ID = counter;
         counter++;
     }
 
@@ -34,7 +34,7 @@ public class Proffesor {
     }
 
     public void setSurname(String surname) {
-        if(name != null && name.matches("[A-Z]{1}[a-z]+")) {
+        if(surname != null && surname.matches("[A-Z]{1}[a-z]+")) {
             this.surname = surname;
         }
         else{
