@@ -1,6 +1,6 @@
 package model;
 
-public class Proffesor {
+public class Professor {
 
     private long p_ID;
     private String name;
@@ -50,14 +50,14 @@ public class Proffesor {
         this.degree = degree;
     }
 
-    public Proffesor( String name, String surname, Degree degree) {
+    public Professor(String name, String surname, Degree degree) {
         setP_ID();
         setName(name);
         setSurname(surname);
         setDegree(degree);
     }
 
-    public Proffesor(){
+    public Professor(){
         setP_ID();
         setName("Default");
         setSurname("Default");

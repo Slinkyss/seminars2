@@ -8,7 +8,7 @@ public class Course {
     private int creditPoints;
 
     private static long counter = 0;
-    private Proffesor proffesor;
+    private Professor professor;
 
     public long getC_ID() {
         return c_ID;
@@ -43,26 +43,26 @@ public class Course {
             this.creditPoints = 2;
     }
 
-    public Proffesor getProffesor() {
-        return proffesor;
+    public Professor getProffesor() {
+        return professor;
     }
 
-    public void setProffesor(Proffesor proffesor) {
-        this.proffesor = proffesor;
+    public void setProffesor(Professor professor) {
+        this.professor = professor;
     }
 
     public Course(){
         setC_ID();
         setTitle("Matene");
         setCreditPoints(4);
-        setProffesor(new Proffesor());
+        setProffesor(new Professor());
     };
 
-    public Course(String title, int creditPoints, Proffesor proffesor) {
+    public Course(String title, int creditPoints, Professor professor) {
         setC_ID();
         setTitle(title);
         setCreditPoints(creditPoints);
-        setProffesor(proffesor);
+        setProffesor(professor);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Course {
                 "c_ID=" + c_ID +
                 ", title='" + title + '\'' +
                 ", creditPoints=" + creditPoints +
-                ", proffesor=" + proffesor + // izsaugta profesora string funkcija
+                ", proffesor=" + professor + // izsaugta profesora string funkcija
                 '}';
     }
 }

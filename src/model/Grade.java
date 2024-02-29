@@ -1,5 +1,7 @@
 package model;
 
+
+
 public class Grade {
 
     private long g_ID;
@@ -64,4 +66,6 @@ public class Grade {
     public String toString(){
         return student.getName() + " " + student.getSurname() + value + "in course :" + course.getTitle();
     }
+
+
 }
