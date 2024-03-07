@@ -96,5 +96,30 @@ public class MainService {
 
 
     }
-    
+
+    public static void sortByGrade(){
+
+    }
+
+    //CRUD CREATE RETRIEVE UPDATE DELETE
+
+    public static void createStudent(String name, String surname)throws  Exception{
+        if(name == null || surname == null) throw new Exception("Problems with input arguments");
+
+        boolean isFound = false;
+
+        for(Student tempSt : students){
+            if(tempSt.getName().equals(name) && tempSt.getSurname().equals(surname))
+            {
+                isFound = true;
+                break;
+            }
+
+            if(!isFound){
+                Student st = new Student(name, surname);
+                students.add(st);
+            }
+        }
+    }
+
 }
