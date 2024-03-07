@@ -1,5 +1,6 @@
 package model;
 
+
 public class Professor {
 
     private long p_ID;
@@ -74,4 +75,6 @@ public class Professor {
                 ", degree='" + degree + '\'' +
                 '}';
     }
+
+
 }

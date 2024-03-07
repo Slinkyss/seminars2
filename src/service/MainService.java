@@ -10,6 +10,8 @@ public class MainService {
     private static ArrayList<Professor> professors = new ArrayList<>();
     private static ArrayList<Student> students = new ArrayList<>();
     private static ArrayList<Grade>  grades = new ArrayList<>();
+
+    private static ArrayList<Course>  courses = new ArrayList<>();
     public static void main(String[] args){
 
 
@@ -62,4 +64,37 @@ public class MainService {
         }
         return sum/ howManyCP;
     }
+
+    public static float calculateAvgGradeOfCourse(Course course) throws Exception{
+        if (course == null) throw new Exception("Problems with input course");
+        float sum = 0;
+        int howMany = 0;
+
+        for(Grade tempGr : grades) {
+            if(tempGr.getCourse().equals(course)) {
+                sum += tempGr.getValue();
+                howMany++;
+            }
+        }
+
+        if(howMany == 0) throw new Exception("There are no grades in this course");
+
+        return sum/howMany;
+    }
+
+    public static int howManyCourses(Professor professor)throws Exception{
+        if (professor == null) throw new Exception("Problems with input course");
+        int howMany = 0;
+
+        for(Course Tempcourse : courses) {
+            if(Tempcourse.getProffesor().equals(professor)){
+                howMany++;
+            }
+        }
+
+        return howMany;
+
+
+    }
+    
 }
