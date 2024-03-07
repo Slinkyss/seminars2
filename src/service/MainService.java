@@ -97,9 +97,31 @@ public class MainService {
 
     }
 
-    public static void sortByGrade(){
-
-    }
+//    public static ArrayList<Student> sortByGrade(){
+//        ArrayList<Student> result = new ArrayList<>();
+//
+//        for(Student tempSt : students){
+//
+//            try{
+//                calculateAVGrade(tempSt);
+//                result.add(tempSt);
+//            }
+//            catch(Exception e) {
+//                System.out.println(e);
+//            }
+//        }
+//
+//        for(int i = 0; i < result.size(); i++){
+//            for(int j = 0; j < result.size(); j++){
+//                if(calculateAVGrade(result.get(i)) < calculateAVGrade(result.get(j))){
+//
+//                }
+//
+//
+//            }
+//        }
+//
+//    }
 
     //CRUD CREATE RETRIEVE UPDATE DELETE
 
