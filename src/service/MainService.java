@@ -122,4 +122,43 @@ public class MainService {
         }
     }
 
+    //retrieve by surname
+
+    public static Student retrieveByStudentSurname(String surname)throws  Exception{
+        if(surname == null) throw new Exception("Problems with input arguments");
+
+        for (Student tempSt : students){
+            if(tempSt.getSurname().equals(surname)){
+                return tempSt;
+            }
+        }
+        throw new Exception(surname + "is not in our system");
+    }
+
+    public static void updateStudentBy(String name, String surname,String newSurname)throws  Exception{
+        if(name == null || surname == null) throw new Exception("Problems with input arguments");
+
+
+        for(Student tempSt : students){
+            if(tempSt.getName().equals(name) && tempSt.getSurname().equals(surname))
+            {
+                tempSt.setSurname(newSurname);
+                return;
+            }
+
+
+            }
+        throw new Exception(name +  " " + surname + "is not registered in system");
+    }
+
+    public static void deleteBySurname(String name, String surname)throws  Exception{
+        if(surname == null) throw new Exception("Problems with input arguments");
+        for (Student tempSt : students){
+            if(tempSt.getSurname().equals(surname) && tempSt.getName().equals(name)){
+                students.remove(tempSt);
+            }
+        }
+
+    }
+
 }
